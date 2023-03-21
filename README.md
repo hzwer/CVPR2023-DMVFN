@@ -136,7 +136,7 @@ unzip ucf101_jpegs_256.zip
 
 ### Run
 
-#### Training
+#### 😆Training
 
 For Cityscapes Dataset:
 
@@ -172,7 +172,7 @@ python3 -m torch.distributed.launch --nproc_per_node=8 \
 --num_gpu 8
 ```
 
-#### Testing
+#### 🤔️Testing
 
 **<span id="directly_download_test_splits"> Directly download test splits of different datasets</span>**
 
@@ -207,7 +207,7 @@ Run the following command to directly test the image results.
 python3 ./scripts/test_ssim_lpips.py
 ```
 
-#### Single test
+#### 😋Single test
 
 We provide a simple code to predict a `t+1` image with `t-1` and `t` images. Please run the following command:
 

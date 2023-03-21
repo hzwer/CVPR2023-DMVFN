@@ -25,6 +25,8 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--image_0_path', required=True, type=str, help='image 0 path')
 parser.add_argument('--image_1_path', required=True, type=str, help='image 1 path')
 parser.add_argument('--load_path', required=True, type=str, help='model path')
+parser.add_argument('--output_dir', default="pred.png", type=str, help='output path')
+
 args = parser.parse_args()
 
 def evaluate(model, args):
@@ -42,7 +44,7 @@ def evaluate(model, args):
 
         pred = model.eval(img, 'single_test') # 1CHW
         pred = np.array(pred.cpu().squeeze() * 255).transpose(1, 2, 0) # CHW -> HWC
-        cv2.imwrite('pred.png', pred)
+        cv2.imwrite(args.output_dir, pred)
             
 if __name__ == "__main__":    
     model = Model(load_path=args.load_path, training=False)

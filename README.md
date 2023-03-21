@@ -207,6 +207,18 @@ Run the following command to directly test the image results.
 python3 ./scripts/test_ssim_lpips.py
 ```
 
+#### Single test
+
+We provide a simple code to predict a `t+1` image with `t-1` and `t` images. Please run the following command:
+
+```bash
+python3 ./scripts/single_test.py \
+--image_0_path ./images/sample_img_0.png \
+--image_1_path ./images/sample_img_1.png \
+--load_path path_of_pretrained_weights \
+--output_dir pred.png
+```
+
 ## Recommend
 We sincerely recommend some related papers:
 

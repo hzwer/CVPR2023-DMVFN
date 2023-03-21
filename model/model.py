@@ -110,8 +110,13 @@ class Model:
             preds.append(pred)
             assert len(preds) == 1
         elif name == 'single_test': # 1, C, H, W
-            merged = self.dmvfn(imgs, scale=scale_list, training=False) # 1, 3, H, W
-            return merged
+            merged = self.dmvfn(imgs[0], scale=scale_list, training=False) # 1, 3, H, W
+            length = len(merged)
+            if length == 0:
+                pred = imgs[:, 0]
+            else:
+                pred = merged[-1]
+            return pred
 
 
         return torch.stack(preds, 1)

@@ -1,4 +1,0 @@
-.gitignore
-*.png
-*/__pycache__/
-*/*/__pycache__/

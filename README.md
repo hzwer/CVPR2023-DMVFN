@@ -229,8 +229,9 @@ ECCV22 - [Real-Time Intermediate Flow Estimation for Video Frame Interpolation](
 CVPR22 - [Optimizing Video Prediction via Video Frame Interpolation](https://github.com/YueWuHKUST/CVPR2022-Optimizing-Video-Prediction-via-Video-Frame-Interpolation)
 
 ## Citation
+If you think this project is helpful, please feel free to leave a star or cite our paper:
 ```
-@inproceedings{hu2022dmvfn,
+@inproceedings{hu2023dmvfn,
   title={A Dynamic Multi-Scale Voxel Flow Network for Video Prediction},
   author={Hu, Xiaotao and Huang, Zhewei and Huang, Ailin and Xu, Jun and Zhou, Shuchang},
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},

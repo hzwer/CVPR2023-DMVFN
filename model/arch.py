@@ -75,7 +75,7 @@ class MVFB(nn.Module):
         flow0 = flow
         if scale != 1:
             x = F.interpolate(x, scale_factor=1. / scale, mode="bilinear", align_corners=False)
-        flow = F.interpolate(flow, scale_factor=1. / scale, mode="bilinear", align_corners=False) * 1. / scale
+            flow = F.interpolate(flow, scale_factor=1. / scale, mode="bilinear", align_corners=False) * 1. / scale
         x = torch.cat((x, flow), 1)
         x1 = self.conv0(x)
         x2 = self.conv_sq(self.convblock(x1) + x1)

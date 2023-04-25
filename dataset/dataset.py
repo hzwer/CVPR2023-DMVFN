@@ -270,7 +270,7 @@ class UCFTrainDataset(Dataset):
         video_path = self.train_data[index]
         frame_list = sorted(os.listdir(os.path.join(self.path, video_path)))
         n = len(frame_list)
-        max_time = 5
+        max_time = 5 if 5 <= n/10 else int(n/10)
         time_step = np.random.randint(1, max_time + 1)#1, 2, 3, 4, 5
         frame_ind = np.random.randint(0, n-9*time_step)
         frame_inds = [frame_ind+j*time_step for j in range(10)]

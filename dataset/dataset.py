@@ -248,8 +248,6 @@ class VimeoTrainDataset(Dataset):
 class UCFTrainDataset(Dataset):
     def __init__(self):
         self.path = './data/ucf101_jpeg/jpegs_256/'
-        self.load_data()
-        self.timestep = 5 # or 10
         self.train_data = []
         with open(os.path.join('/home/huxiaotao/trainlist01.txt')) as f:
             for line in f:
@@ -270,10 +268,15 @@ class UCFTrainDataset(Dataset):
 
     def getimg(self, index):
         video_path = self.train_data[index]
-        frame_list = sorted(os.listdir(video_path))
+        frame_list = sorted(os.listdir(os.path.join(self.path, video_path)))
+        n = len(frame_list)
+        max_time = 5
+        time_step = np.random.randint(1, max_time + 1)#1, 2, 3, 4, 5
+        frame_ind = np.random.randint(0, n-9*time_step)
+        frame_inds = [frame_ind+j*time_step for j in range(10)]
         imgs = []
-        for i in range(len(frame_list), self.timestep):
-            im = cv2.imread(os.path.join(video_path, frame_list[i]))
+        for i in frame_inds:
+            im = cv2.imread(os.path.join(os.path.join(self.path, video_path), frame_list[i]))
             imgs.append(im)
         return  imgs
             

@@ -31,11 +31,11 @@ city_train_root = '../data/cityscapes/leftImg8bit_sequence/train'
 city_train_dir = os.listdir(city_train_root)
 city_train_dir.sort()
 city_train = '../data/cityscapes/train'
+num = 0
 for i in range(len(city_train_dir)):
     frame_dir = os.path.join(city_train_root, city_train_dir[i])
     frame_list = os.listdir(frame_dir)
     frame_list.sort()
-    num = 0
     for j in range(len(frame_list)//30):
         city_train_video_path = os.path.join(city_train, '%06d'%(num))
         if not os.path.exists(city_train_video_path):

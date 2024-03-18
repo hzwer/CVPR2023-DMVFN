@@ -105,7 +105,7 @@ mkdir train_or
 unzip 2011_09_26_drive_0001_sync
 mv 2011_09_26_drive_0001_sync/image02/data/ train_or/2011_09_26_drive_0001_sync
 ```
-Do this command for all files.
+Do this command for all files. We use image02 and image03 for training.
 
 * Run ./utils/prepare_kitti.py.
 

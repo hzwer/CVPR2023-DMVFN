@@ -9,6 +9,7 @@ cnt = 0
 for i in range(len(dir_list)):
     dir_path = os.path.join(kiki_train_path, dir_list[i])
     img_list = os.listdir(dir_path)
+    img_list.sort()
     total_num = len(img_list)
     for i in range(total_num):
         if i<=3 or i>=(total_num-4):
@@ -30,6 +31,7 @@ cnt = 0
 for i in range(len(dir_list)):
     dir_path = os.path.join(kiki_train_path, dir_list[i])
     img_list = os.listdir(dir_path)
+    img_list.sort()
     total_num = len(img_list)
     for i in range(total_num):
         if i<=3 or i>=(total_num-4):

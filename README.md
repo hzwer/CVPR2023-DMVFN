@@ -5,6 +5,8 @@ This project is the implementation of our Paper: [A Dynamic Multi-Scale Voxel Fl
 [Poster](https://drive.google.com/file/d/1W5MD39Wjp4Ryrv_DMC7QXiCNsiG1AL2x/view?usp=sharing) | [研究历程](https://www.zhihu.com/question/585474435/answer/2946859435) | [中文论文](https://drive.google.com/file/d/1mzJipcWRd1wcpphSIUOszzgxMWMFx40D/view?usp=sharing) | [rebuttal (3WA->1WA2SA)](https://drive.google.com/file/d/1S8tZOokoZNxCBkV1GVLWOlUCCoJA7Bfu/view?usp=sharing) | [Demo](https://youtu.be/rlghCGbAqUo)
 
 ![Comparison image](./images/comparison.jpg)
+
+supplement and correction of published paper: 1. In Figure 2(a), $I_{t-1}$ and $I_t$ should be swapped; 2. "Our model is trained on four 2080Ti GPUs for 300 epochs, which takes about 35 hours." This sentence refers to the Cityscapes training set; 3. In Table 1, GFLOPs for KITTI is computed on $256\times832$ using [fvcore](https://github.com/facebookresearch/fvcore).
 ## Usage
 ### Installation
 

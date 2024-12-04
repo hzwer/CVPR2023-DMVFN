@@ -180,7 +180,7 @@ python3 -m torch.distributed.launch --nproc_per_node=8 \
 
 **<span id="directly_download_test_splits"> Directly download test splits of different datasets</span>**
 
-Download Cityscapes_test directly from [Google Drive](https://drive.google.com/drive/folders/1wbysfMixyhauq93GSTrpIy3knG70qiap?usp=sharing).([百度网盘](https://pan.baidu.com/s/1KFxPC-zFi9LJwwed0PxEow) password: wk7k)
+Download Cityscapes_test directly from [Google Drive](https://drive.google.com/file/d/1m5lfwGa6ugavZW9-UFrXNpQ0BWT7qn7X/view?usp=share_link).([百度网盘](https://pan.baidu.com/s/1KFxPC-zFi9LJwwed0PxEow) password: wk7k)
 
 Download KITTI_test directly from [Google Drive](https://drive.google.com/file/d/1_J5QxvozXiLoF3xca0uh9a6dEMVZJtWs/view?usp=drive_link).([百度网盘](https://pan.baidu.com/s/1pG31uHts3lV2ieouZZovcQ) password: e7da)
 
